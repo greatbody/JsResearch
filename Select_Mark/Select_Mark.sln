@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Select_Mark", "..\Select_Mark", "{849209E9-5DBE-4BC5-AA8D-219402DDD755}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFramework = "3.5"
+		Debug.AspNetCompiler.VirtualPath = "/Select_Mark"
+		Debug.AspNetCompiler.PhysicalPath = "E:\GitCode\GitHub\JsResearch\Select_Mark\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\Select_Mark\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/Select_Mark"
+		Release.AspNetCompiler.PhysicalPath = "E:\GitCode\GitHub\JsResearch\Select_Mark\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\Select_Mark\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "60107"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{849209E9-5DBE-4BC5-AA8D-219402DDD755}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{849209E9-5DBE-4BC5-AA8D-219402DDD755}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
