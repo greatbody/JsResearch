@@ -1,0 +1,29 @@
+<html>
+<head>
+
+
+
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <script type="text/javascript">
+        var liArr = document.getElementsByTagName("li");
+        var liArrLength = liArr.length;
+        for (var i = 0; i < liArrLength; i++) {
+            (function() {
+                debugger;
+                var local_i = i;
+                liArr[i].onclick = function() {
+                    debugger;
+                    alert(local_i.toString());
+                }
+            })();
+        }
+    </script>    
+</body>
+</html>

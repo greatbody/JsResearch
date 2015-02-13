@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title></title>
+		<style type="text/css">
+			.style1{width:78px;}
+		</style>
+	</head>
+	<body>
+		<table style="width:300px;">
+			<tr>
+				<td class="style1">
+				Êý×ÖÎª£º
+				</td>
+				<td style="background-color:#FF0000">
+					<script type="text/javascript">
+						document.write("¾À½á");
+						alert("++");
+					</script>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

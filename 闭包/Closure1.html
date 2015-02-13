@@ -1,0 +1,20 @@
+<html>
+<head>
+    <title>My Closure Test Program</title>
+</head>
+<body>
+    <input type="button" value="click me" id="myButton" />
+
+    <script type="text/javascript">
+        var liArr = document.getElementById("myButton");
+        (function() {
+            var local_i = 0;
+            liArr.onclick = function() {
+                alert(local_i.toString());
+                local_i++;
+            }
+        })();
+    </script>
+
+</body>
+</html>

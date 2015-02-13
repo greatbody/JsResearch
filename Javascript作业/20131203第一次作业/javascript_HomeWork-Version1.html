@@ -1,0 +1,75 @@
+<html>
+	<head>
+		<title></title>
+		<style type="text/css">
+			.style1{width:78px;}
+		</style>
+		<script type="text/javascript">
+		/*
+		 *功能：计算
+		 *参数：无
+		 *返回值：字符串类型，内容是：所有满足情况的数字，以英文逗号分隔
+		 *创建人：孙瑞
+		 *创建日期：2013-12-03 18:18
+		 */
+		function getFixedNumber() {
+			//初始化数据
+			//sResult为存储拼接字符串的变量
+			var sResult="";
+			//nIndex为循环的临时变量
+			var nIndex = 0;
+			//nNum为基数：因为首先需要求与57和67都整除的一个数，因此既求与57*67=3819整除的数，同时，这个数
+			//需要满足形式为“6××24”;
+			//将60024除以3819得到15.72，既3819*15=57285这个值当然是3819的倍数，
+			//同时，57285+nIndex*3819的值也一定是3819的倍数，即既满足被57和67整除，
+			//满足“6××24”的形式的最大的数是69924，69924/3819=18.3095，减去前面我们参考的15，得到3.3095，
+			//也就是说，共有3个可以被3819整除的数在60024到69924范围内
+			//我的代码是增量法，所以采用的是18-15=3这个值
+			//故选择了57285作为起始值
+			var nNum = 57285;
+			for (nIndex = 0; nIndex < 3; nIndex++) {
+				//每次增加一个57和67的最小公倍数
+				nNum += 3819;
+				//确保数字范围不超过5个字符，才会执行
+				if (nNum.toString().length==5) {
+					//先判断是否为6开头，再判断是否以24结尾
+					if ((nNum.toString().substring(0, 1) == "6")&&(nNum.toString().substring(3, 5) == "42")) {
+						//根据结果字符串的当前情况决定拼接方式
+						if (sResult == "") {
+							//如果sResult为空字符串，则直接赋值
+							sResult = nNum.toString();
+						}
+						else {
+							//如果sResult不为空字符串，则加上英文逗号，再拼接上nNum.toString()的字符串
+							sResult += "," + nNum.toString();
+						}
+					}
+				}
+			}
+			//如果sResult最终为空字符串，则输出提示（虽然本程序一定有结果，但是写程序一定要考虑意外的情况）
+			if (sResult == "") {
+				//返回意外的提示
+				return "No Result";
+			}
+			else {
+				//正常的情况，返回拼接得到的字符串
+				return sResult;
+			}
+		}
+		</script>
+	</head>
+	<body>
+		<table style="width:300px;">
+			<tr>
+				<td class="style1">
+				数字为：
+				</td>
+				<td style="background-color:#FF0000">
+					<script type="text/javascript">
+						document.write(getFixedNumber());
+					</script>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

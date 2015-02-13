@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>测试闭包的用法</title>
+
+    <script type="text/javascript">
+        function jQuery() {
+            var nHeight = 50;
+            function oShow() {
+                alert(nHeight.toString());
+                nHeight++;
+                return 'hi';
+            }
+            return oShow;
+        }
+        var oNewShow = jQuery();
+        alert(oNewShow());
+    </script>
+
+</head>
+<body>
+    <input type="button" value="Do Love" onclick="oNewShow();" />
+</body>
+</html>

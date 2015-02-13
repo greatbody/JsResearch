@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>测试闭包的用法</title>
+
+    <script type="text/javascript">
+        function jQuery() {
+            var height = 50;
+            var jShow = function() {
+                alert(height.toString());
+                height++;
+            }
+            return jShow;
+        }
+    </script>
+
+    <script>
+        var liArr = document.getElementsByTagName("li");
+        var liArrLength = liArr.length;
+        for (var i = 0; i < liArrLength; i++) {
+            (function() {
+                var local_i = i;
+                liArr[i].onclick = function() {
+                    alert(local_i.toString());
+                }
+            })();
+        }
+    </script>
+
+</head>
+<body>
+    <input type="button" value="Do Love" onclick="debugger;jQuery()();" />
+</body>
+</html>

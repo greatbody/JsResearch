@@ -1,0 +1,28 @@
+<html>
+<head>
+    <title>闭包2</title>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+    </ul>
+</body>
+
+<script type="text/javascript">
+    debugger;
+    var liArr = document.getElementsByTagName("li");
+    var liArrLength = liArr.length;
+    for (var i = 0; i < liArrLength; i++) {
+        (function() {
+            var kl = i;
+            liArr[i].onclick = function() {
+                debugger;
+                //var kl = i;//错误原因，这个内容在内部，会被清除
+                alert(kl.toString());
+            }
+        })();
+    }
+</script>
+
+</html>

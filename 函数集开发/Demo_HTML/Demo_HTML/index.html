@@ -1,0 +1,58 @@
+<html>
+<head>
+  <title>Michael Jackson · King Of Pop</title>
+  <script type="text/javascript" src="MyString.js"></script>
+  <script type="text/javascript" src="Binary.js"></script>
+  <script type="text/javascript" src="MyMath.js"></script>
+  <script language="JavaScript" type="text/javascript">
+    function getFloatPoint(oNumber) {
+      var sNumber = "";
+      var nPointIndex = 0;
+      if (typeof (oNumber) == "Number") {
+        sNumber = String(oNumber);
+      }
+      else {
+        sNumber = oNumber;
+      }
+      sNumber = String(sNumber);
+      return sNumber.indexOf(".", 0);
+    }
+    function onEntable() {
+      var s = "1,000,000.05";
+      var mys = s.replace(",", "");
+      alert(mys);
+      var n = parseFloat(s);
+      alert(n);
+    }
+    function onBtnClick() {
+      //replaceString("weare,sd", ",");
+      var s = strin.value;
+      var split = strsplit.value;
+      result.value = splitString(s, split, false).join("|");
+    }
+    function onBtnReplaceClick() {
+      var sT = "we are the world,we are the children";
+      var sR = replaceString(sT, "ar", "**");
+      result.value = sR;
+    }
+    function onBtnBinaryClick() {
+      result.value = bin2dec("11");
+    }
+  </script>
+
+</head>
+<body>
+  <div>
+    <span id="wearetheworld">Michael Jackson·King Of Pop</span>
+    <br />
+    内容：<input type="text" value="" id="strin" />
+    <br />
+    分隔符：<input type="text" value="" id="strsplit" />
+    <br />
+    结果显示：<textarea cols="10" rows="10" title="wenben" id="result" ></textarea>
+    <input type="button" onclick="onBtnClick();" value="Clicke ME" />
+    <input type="button" onclick="onBtnReplaceClick();" value="替换" />
+    <input type="button" onclick="onBtnBinaryClick();" value="二进制测试" />
+  </div>
+</body>
+</html>
